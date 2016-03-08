@@ -59,21 +59,25 @@ class Map:
             #print "set {}".format(i)
         
     def printMap(self):
+        print "City Map"
         for i in range(self.size):
             for j in range(self.size):
                 print self.points[i*self.size+j].loc, " ",
             print ""
+        print
             
     def printBuilding(self):
         for i in range(len(self.buildings)):
             print "For building", -i-1
             print "It has {} layers".format(self.buildings[i].nWL)
+        print ""
     
     def printCitizens(self):
         for i in range(len(self.citizens)):
             print "For citizen", i+1
             print "He/She lives in Home Location {}.".format(self.citizens[i].homeloc)
             print "He/She works in Building {}, Layer {}.".format(self.citizens[i].workBuilding, self.citizens[i].workLayer)
+        print ""
 
         
 if __name__ == "__main__":
